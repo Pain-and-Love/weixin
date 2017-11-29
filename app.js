@@ -20,6 +20,7 @@ app.use(function *(next) {
 
     var str = [token, timestamp, nonce].sort();
     var sha = sha1(str);
+    console.log(sha, signature, sha === signature);
     if (sha === signature) {
         this.body = echostr + '';
     } else {
