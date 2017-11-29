@@ -18,6 +18,7 @@
       "repo" : "git@github.com:Pain-and-Love/weixin.git",
       "path" : "/root/weixin",
       "ssh_options": "StrictHostKeyChecking=no",
+      "pre-setup" : "git pull",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production --node-args='--harmony'",
       "env"  : {
         "NODE_ENV": "production"
