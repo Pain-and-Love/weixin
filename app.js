@@ -23,4 +23,4 @@ var app = new Koa();
 app.use(wechat(config.wechat));
 
 app.listen(8080);
-console.log('Listen at port: 8080')
+console.log('Listen at port: 8080');

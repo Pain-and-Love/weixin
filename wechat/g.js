@@ -61,6 +61,7 @@ Wechat.prototype.updateAccessToken = function() {
             var data = res[1];
             var now = (new Date().getTime());
             var expires_in = now + (data.expires_in - 20) * 1000
+            console.log('POST => ', res);
             data.expires_in = expires_in;
 
             resolve(data);
